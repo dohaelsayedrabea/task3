@@ -1,0 +1,45 @@
+.wrapper {
+    padding: 20px 0;
+    border: 1px solid #e9e9e9;
+    border-color: #e9e9e9;
+    border-radius: 20px;
+    text-align: center;
+    h2 {
+        font-size: 18px;
+        color: $titleColor;
+        margin-bottom: 25px;
+        font-family: $font-family-Bold;
+    }
+    #file-input {
+        display: none;
+    }
+    label[for='file-input'] {
+        margin: 0 !important;
+        padding: 0 !important;
+        * {
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        span {
+            margin-left: 10px;
+        }
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 100%;
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+    i {
+        font-size: 18px;
+        &.remove {
+            vertical-align: middle;
+            margin-right: 5px;
+            cursor: pointer;
+            display: none;
+            color: #ed1c24;
+        }
+    }
+}

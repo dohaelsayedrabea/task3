@@ -1,0 +1,17 @@
+footer {
+    padding: 24px 0;
+}
+
+.footerLogin {
+    ul {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        span {
+            color: #bdbdbd;
+            font-size: 15px;
+            font-family: $font-family-Bold;
+        }
+    }
+}

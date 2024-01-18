@@ -1,0 +1,29 @@
+.btn-primary {
+    position: relative;
+    height: 48px;
+    border-radius: 0;
+    background: rgb(31, 177, 185);
+    background: linear-gradient(270deg, rgba(31, 177, 185, 1) 0%, rgba(113, 165, 122, 1) 97%);
+    border: 0px;
+    border-color: transparent;
+    box-shadow: 0px 10px 9px 0px #d4d4d4;
+    font-size: 18px;
+    line-height: 33px;
+    &::after {
+        font-family: FontAwesome;
+        position: absolute;
+        left: 15px;
+        top: auto;
+        bottom: auto;
+        content: "\f060";
+        color: #568565;
+        font-size: 22px;
+        line-height: 39px;
+    }
+}
+
+.withoutArrow {
+    &::after {
+        content: unset;
+    }
+}

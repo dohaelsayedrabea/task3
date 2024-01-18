@@ -1,0 +1,45 @@
+.checkboxgroup {
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+        &:checked {
+            &+label {
+                &:after {
+                    content: url(../images/icon/check.svg);
+                    display: block;
+                    position: absolute;
+                    top: -1px;
+                    right: -5px;
+                    width: 0px;
+                    height: 0px;
+                    background: $grayColor;
+                }
+            }
+        }
+    }
+    label {
+        position: relative;
+        font-size: 16px;
+        color: $textColor;
+        cursor: pointer;
+        &:before {
+            content: '';
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $grayColor;
+            border-radius: 6px;
+            background: $grayColor;
+            padding: 11px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-left: 13px;
+        }
+    }
+}

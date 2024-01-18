@@ -1,0 +1,43 @@
+::-webkit-scrollbar {
+    width: 0px !important;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+/*-----------------------
+   fontFamily
+-------------------------*/
+
+$font-family-light: 'Tajawal-Light',
+sans-serif;
+$font-family-base: 'Tajawal-Regular',
+sans-serif;
+$font-family-Medium: 'Tajawal-Medium',
+sans-serif;
+$font-family-Bold: 'Tajawal-Bold',
+sans-serif;
+$font-family-ExtraBold: 'Tajawal-ExtraBold',
+sans-serif;
+
+/*-----------------------
+   color
+-------------------------*/
+
+$textColor:rgba(0, 0, 0, 0.60);
+$grayColor:#f5f5f5;
+$textColor:#8f8d8d;
+$blackText:#000;
+$titleColor:#41b3b0;

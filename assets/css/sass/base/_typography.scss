@@ -1,0 +1,204 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    scroll-behavior: initial;
+    overflow-x: hidden !important;
+}
+
+body {
+    font-size: 16px;
+    background: #fff;
+    vertical-align: baseline;
+    line-height: 26px;
+    font-weight: 400;
+    overflow-x: hidden !important;
+    font-family: $font-family-base;
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+figure,
+ol,
+p,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+
+/**
+ * Paragraphs
+ */
+
+p {
+    font-family: $font-family-base;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/**
+ * Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+// Use the helper classes to emulate styles for another element
+// For example: h3.h1 or h3.alpha
+h1,
+.h1,
+.alpha {
+    margin-bottom: 0;
+}
+
+// Only give these headings a margin-top if they are after other elements
+*+h1,
+*+.h1,
+*+.alpha,
+*+h2,
+*+.h2,
+*+.beta,
+*+h3,
+*+.h3,
+*+.gamma,
+*+h4,
+*+.h4,
+*+.delta {
+    margin-top: 16px;
+}
+
+small {
+    font-size: 80%;
+}
+
+
+/**
+ * Miscellaneous
+ */
+
+// Emphasis
+strong,
+b {
+    font-weight: $font-family-Bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+    border-bottom: 1px dotted #ddd;
+    cursor: help;
+}
+
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+    padding-left: 10px;
+    border-left: 4px solid lighten(#000, 80%);
+    p {
+        margin-bottom: 0;
+        font-weight: 300;
+    }
+    small {
+        display: block;
+        color: lighten(#000, 70%);
+        &::before {
+            content: '\2014 \00A0';
+        }
+    }
+}
+
+// Quotes
+q,
+blockquote {
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+
+cite {
+    font-style: normal;
+}
+
+// Addresses styling not present in S5, Chrome
+dfn {
+    font-style: italic;
+}
+
+// Addresses styling not present in IE6/7/8/9
+mark {
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/**
+ * Utilities
+ */
+
+.text-centre, // British or US English spellings..
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Horizontal rules
+hr {
+    border: 0;
+    height: 1px;
+}
+
+.hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.p-relative {
+    position: relative;
+}

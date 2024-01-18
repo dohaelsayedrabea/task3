@@ -1,0 +1,65 @@
+/*-----------------------
+    mixins
+-------------------------*/
+
+@import 'sass/utils/mixins';
+
+/*-----------------------
+    variables
+-------------------------*/
+
+@import 'sass/utils/variables';
+
+/*-----------------------
+    typography
+-------------------------*/
+
+@import 'sass/base/typography';
+
+/*-----------------------
+   reset
+-------------------------*/
+
+@import 'sass/base/reset';
+
+/*-----------------------
+   checkbox
+-------------------------*/
+
+@import 'sass/components/checkbox';
+
+/*-----------------------
+  Button
+-------------------------*/
+
+@import 'sass/components/buttons';
+
+/*-----------------------
+   header 
+-------------------------*/
+
+@import 'sass/layout/header';
+
+/*-----------------------
+   login Page
+-------------------------*/
+
+@import 'sass/pages/login';
+
+/*-----------------------
+   index Page
+-------------------------*/
+
+@import 'sass/pages/home';
+
+/*-----------------------
+   index Page
+-------------------------*/
+
+@import 'sass/components/fileUpload';
+
+/*-----------------------
+   Footer 
+-------------------------*/
+
+@import 'sass/layout/footer';
