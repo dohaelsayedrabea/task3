@@ -1,0 +1,8 @@
+.progress {
+    border-radius: 0;
+    height: 6px;
+    background: #f4f4f4;
+    .progress-bar {
+        background-color: $titleColor;
+    }
+}

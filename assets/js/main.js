@@ -36,5 +36,8 @@
     // Initialize and check for mobile
     $.fn.grtmobile();
 
-
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
 })(jQuery);

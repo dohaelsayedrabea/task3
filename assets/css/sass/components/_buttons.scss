@@ -27,3 +27,28 @@
         content: unset;
     }
 }
+
+.btnTimes,
+.btn-edit {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #d9d9d9;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    outline: 0 !important;
+}
+
+.infoPopover {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #c5c5c5;
+    padding: 0;
+    color: #6f6f6f;
+    font-size: 12px;
+    line-height: 12px;
+}

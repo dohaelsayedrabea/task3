@@ -89,8 +89,8 @@
                                     <nav>
                                         <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
                                         <ul class="grt-menu">
-                                            <li class="active"><a href="">الرئيسية</a></li>
-                                            <li><a href="">ارسال معلومة مكانية</a></li>
+                                            <li><a href="">الرئيسية</a></li>
+                                            <li class="active"><a href="">ارسال معلومة مكانية</a></li>
                                             <li><a href="">استقبال معلومة مكانية</a></li>
                                             <li><a href="">التقارير</a></li>
                                         </ul>
@@ -507,70 +507,361 @@
         <!-- Body - style you can find in style.css -->
         <!-- ============================================================== -->
         <main>
-            <div class="optionBox">
+            <div class="filterFormPart">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-9 col-md-12">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-5 col-md-12">
-                                    <div class="cardOption" data-aos="zoom-in">
-                                        <div class="headerCard">
-                                            <ul>
-                                                <li>
-                                                    <span class="image">
-                                                        <img src="assets/images/icon/messae.png" alt="image"/>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">الوارد</span>
-                                                </li>
-                                                <li>
-                                                    <span class="number">55</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!---->
-                                        <div class="bodyCard">
-                                            <p>
-                                                هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---->
-                                <div class="col-lg-1 col-md-0"></div>
-                                <!---->
-                                <div class="col-lg-5 col-md-12">
-                                    <div class="cardOption" data-aos="zoom-in">
-                                        <div class="headerCard">
-                                            <ul>
-                                                <li>
-                                                    <span class="image">
-                                                        <img src="assets/images/icon/messup.png" alt="image"/>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">الصادر</span>
-                                                </li>
-                                                <li>
-                                                    <span class="number">55</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!---->
-                                        <div class="bodyCard">
-                                            <p>
-                                                هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="filterCard">
+                                <form>
+                                    <ul>
+                                        <li>
+                                            <input type="text" class="form-control" placeholder="رقم الطلب">
+                                        </li>
+                                        <li>
+                                            <input type="text" class="form-control" placeholder="اسم العميل">
+                                        </li>
+                                        <li>
+                                            <select class="selectpicker">
+                                            <option selected disabled>الحالة</option>
+                                            <option>الحاله الاولي</option>
+                                            <option>الحاله التانيه</option>
+                                        </select>
+                                        </li>
+                                        <li>
+                                            <input type="text" class="form-control" placeholder="تاريخ الإرسال" value="" onFocus="(this.type='date')">
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn-primary withoutArrow">دخول</a>
+                                        </li>
+                                    </ul>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- ==============================================================-->
+            <div class="resultFilterCardPart">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header blue">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header red">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header active">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                            <div class="card">
+                                <div class="card-header yellow">
+                                    <ul>
+                                        <li>
+                                            5523255165
+                                        </li>
+                                        <li>
+                                            <span><i class="fa-solid fa-calendar-days"></i> 26/3/2019</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="card-body">
+                                    <h4>اسم المستقبل</h4>
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما في الصفحة التي يقرأها</p>
+                                </div>
+                                <!---->
+                                <div class="card-footer">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content='<p class="popoverText">5 مرفقات</p>'>
+                                        <i class="fa-solid fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+            <!-- ==============================================================-->
+            <div class="paginationCardPart">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <ul class="d-flex align-items-center paginationList">
+                                <li>
+                                    الصفحة
+                                </li>
+                                <li>
+                                    <input type="text" class="form-control" value="1">
+                                </li>
+                                <li>
+                                    من 25
+                                </li>
+                                <li>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </li>
+                            </ul>
+                        </div>
+                        <!---->
+                        <div class="col-lg-6 col-md-12">
+                            <ul class="d-flex align-items-center justify-content-end">
+                                <li>
+                                    العدد
+                                </li>
+                                <li>
+                                    <select class="selectpicker">
+                                        <option>10 عناصر</option>
+                                        <option>9 عناصر</option>
+                                        <option>20 عنصر</option>
+                                    </select>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============================================================-->
+
         </main>
         <!-- ============================================================== -->
         <!-- Footer - style you can find in style.css -->
@@ -609,8 +900,6 @@
     <script src="assets/js/aos.js"></script>
     <!--Main Js-->
     <script src="assets/js/main.js"></script>
-    <!--File Upload-->
-    <script src="assets/js/fileUpload.js"></script>
     <script>
         $(function() {
             $('[data-bs-toggle="popover"]').popover({

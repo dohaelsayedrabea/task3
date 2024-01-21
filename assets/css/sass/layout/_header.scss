@@ -165,6 +165,11 @@ header {
                             left: 0;
                             margin: auto;
                             border: 3px solid #1aa0a9;
+                            -webkit-animation-timing-function: linear;
+                            -webkit-animation: scaler 1.5s infinite;
+                            -webkit-animation-timing-function: linear;
+                            animation: scaler 1.5s infinite;
+                            animation-timing-function: linear;
                         }
                         &:before {
                             position: absolute;
@@ -179,6 +184,11 @@ header {
                             left: 0;
                             margin: auto;
                             border: 1.5px solid #1aa0a9;
+                            -webkit-animation-timing-function: linear;
+                            -webkit-animation: scaler 1.5s infinite;
+                            -webkit-animation-timing-function: linear;
+                            animation: scaler 1.5s infinite;
+                            animation-timing-function: linear;
                         }
                     }
                 }
@@ -311,5 +321,59 @@ header {
                 }
             }
         }
+    }
+}
+
+@-webkit-keyframes scaler {
+    0% {
+        -webkit-transform: scale(0.8);
+    }
+    33% {
+        -webkit-transform: scale(0.9);
+        opacity: 0.20;
+    }
+    67% {
+        -webkit-transform: scale(1);
+        opacity: 0.10;
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes scaler {
+    0% {
+        -webkit-transform: scale(0.8);
+    }
+    33% {
+        -webkit-transform: scale(0.9);
+        opacity: 0.20;
+    }
+    67% {
+        -webkit-transform: scale(1);
+        opacity: 0.10;
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes scaler {
+    0% {
+        -webkit-transform: scale(0.8);
+    }
+    33% {
+        -webkit-transform: scale(0.9);
+        opacity: 0.20;
+    }
+    67% {
+        -webkit-transform: scale(1);
+        opacity: 0.10;
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        opacity: 0;
     }
 }
