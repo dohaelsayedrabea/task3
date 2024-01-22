@@ -4,7 +4,7 @@
 <head>
     <!-- meta tag -->
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Send Information Details</title>
     <meta name="description" content="">
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,12 +33,18 @@
 </head>
 
 <body dir="rtl">
-
+    <!-- ============================================================== -->
+    <!--  Loading- style you can find in style.css -->
+    <!-- ============================================================== -->
+    <div id="page-preloader"><span class="spinner"><img src="assets/images/icon/loading.gif"/> </span></div>
     <div class="page-Wrapper">
         <!-- ============================================================== -->
         <!-- Header - style you can find in style.css -->
         <!-- ============================================================== -->
         <header>
+            <div class="logoHeader">
+                <img src="assets/images/logo/logo.webp" alt="logo" />
+            </div>
             <div class="topHeader">
                 <div class="container">
                     <div class="row">
@@ -70,7 +76,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#" class="roundedCircle">
+                                    <a href="login.html" class="roundedCircle">
                                         <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i>
                                     </a>
                                 </li>
@@ -83,23 +89,23 @@
             <div class="navHeader">
                 <div class="container">
                     <div class="row p-relative align-items-center">
-                        <div class="col-xxl-10 col-lg-10 col-md-9 col-4">
+                        <div class="col-xxl-10 col-lg-10 col-md-9 col-6">
                             <div class="grt-menu-row">
                                 <div class="grt-menu-right">
                                     <nav>
                                         <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
                                         <ul class="grt-menu">
-                                            <li><a href="">الرئيسية</a></li>
-                                            <li class="active"><a href="">ارسال معلومة مكانية</a></li>
-                                            <li><a href="">استقبال معلومة مكانية</a></li>
-                                            <li><a href="">التقارير</a></li>
+                                            <li><a href="index.html">الرئيسية</a></li>
+                                            <li class="active"><a href="sendInformation.html">ارسال معلومة مكانية</a></li>
+                                            <li><a href="#">استقبال معلومة مكانية</a></li>
+                                            <li><a href="#">التقارير</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                         <!---->
-                        <div class="col-xxl-2 col-lg-2 col-md-3 col-8">
+                        <div class="col-xxl-2 col-lg-2 col-md-3 col-6">
                             <div class="exchangebtn">
                                 <a data-bs-toggle="modal" data-bs-target="#formModal">
                                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -504,6 +510,359 @@
             </div>
         </div>
         <!-- ============================================================== -->
+        <!-- reply Message - style you can find in style.css -->
+        <!-- ============================================================== -->
+        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-bs-labelledby="messageModalLabel" aria-bs-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="messageModalLabel">رد علي المراسلات </h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-bs-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="formTaps">
+                            <!--Tap Two-->
+                            <div class="tab-pane">
+                                <div class="tab-content">
+                                    <div class="tapContent">
+                                        <div class="row border-bottom">
+                                            <div class="col-lg-8 col-md-8 col-sm-12">
+                                                <div class="h-100">
+                                                    <form>
+                                                        <!---->
+                                                        <div class="mb-10">
+                                                            <label class="form-label">الرد علي المراسلة</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="mb-10">
+                                                            <label class="form-label">نوع المرفق</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <!---->
+                                                        <div class="mb-10">
+                                                            <label class="form-label">الشرح</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="upload-files-container">
+                                                            <div class="wrapper">
+                                                                <h2>اسحب المرفقات هنا</h2>
+                                                                <input type="file" id="file-input">
+                                                                <label for="file-input">
+                                                                  <img class="d-block" src="assets/images/icon/addFiles.svg" alt="addFiles"/>
+                                                                  <span></span>
+                                                                </label>
+                                                                <i class="fa fa-times-circle remove"></i>
+                                                            </div>
+                                                        </div>
+                                                        <!--Sperator Div-->
+                                                        <div class="speratorDiv">
+                                                            <p>أضف رابط</p>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="mb-10">
+                                                            <label class="form-label">عنوان الرابط</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <!---->
+                                                        <div class="mb-16">
+                                                            <label class="form-label">الرابط</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                                                <div class="input-group-prepend">
+                                                                    <button class="btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content='<p class="popoverText">اضافة رابط اخر</p>'>
+                                                                        <img src="assets/images/icon/addIcon.svg" alt="icon"/>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <!---->
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="resultUploadCard h-100">
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <div class="itemHeader">
+                                                            <ul class="d-flex align-items-center justify-content-between">
+                                                                <li>
+                                                                    اسم المرفق
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn btnTimes">
+                                                                            <i class="fa-solid fa-times"></i>
+                                                                        </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!---->
+                                                        <div class="itemBody">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-------------------------------------->
+                                                    <div class="item">
+                                                        <ul class="d-flex align-items-center justify-content-between">
+                                                            <li>
+                                                                <span class="d-block">عنوان الرابط</span>
+                                                                <a href="#" class="d-block linkAddress">/www.mockflow.com</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="d-block btn btn-edit">
+                                                                    <i class="fa-solid fa-pencil"></i>
+                                                                </a>
+                                                                <a href="#" class="d-block btn btnTimes">
+                                                                    <i class="fa-solid fa-times"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <ul class="d-flex align-items-center justify-content-between">
+                                                            <li>
+                                                                <span class="d-block">عنوان الرابط</span>
+                                                                <a href="#" class="d-block linkAddress">/www.mockflow.com</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="d-block btn btn-edit">
+                                                                    <i class="fa-solid fa-pencil"></i>
+                                                                </a>
+                                                                <a href="#" class="d-block btn btnTimes">
+                                                                    <i class="fa-solid fa-times"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <ul class="d-flex align-items-center justify-content-between">
+                                                            <li>
+                                                                <span class="d-block">عنوان الرابط</span>
+                                                                <a href="#" class="d-block linkAddress">/www.mockflow.com</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="d-block btn btn-edit">
+                                                                    <i class="fa-solid fa-pencil"></i>
+                                                                </a>
+                                                                <a href="#" class="d-block btn btnTimes">
+                                                                    <i class="fa-solid fa-times"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="item">
+                                                        <ul class="d-flex align-items-center justify-content-between">
+                                                            <li>
+                                                                <span class="d-block">عنوان الرابط</span>
+                                                                <a href="#" class="d-block linkAddress">/www.mockflow.com</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="d-block btn btn-edit">
+                                                                    <i class="fa-solid fa-pencil"></i>
+                                                                </a>
+                                                                <a href="#" class="d-block btn btnTimes">
+                                                                    <i class="fa-solid fa-times"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                        <div class="row justify-content-end pt-25">
+                                            <div class="col-lg-3 col-md-5 col-sm-12">
+                                                <a href="#" class="d-block btn btn-primary">إرسال</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
         <!-- Body - style you can find in style.css -->
         <!-- ============================================================== -->
         <main>
@@ -546,10 +905,10 @@
                                         <div class="row justify-content-center">
                                             <ul class="nav nav-tabs row" id="myTab" role="tablist">
                                                 <li class="col-lg-6 col-md-12 nav-item" role="presentation">
-                                                    <button class="nav-link d-block w-100 active" id="links-tab" data-bs-toggle="tab" data-bs-target="#links-tab-pane" type="button" role="tab" aria-controls="links-tab-pane" aria-selected="true">المرفقات والروابط</button>
+                                                    <button class="nav-link  w-100 active" id="links-tab" data-bs-toggle="tab" data-bs-target="#links-tab-pane" type="button" role="tab" aria-controls="links-tab-pane" aria-selected="true">المرفقات والروابط</button>
                                                 </li>
                                                 <li class="col-lg-6 col-md-12 nav-item" role="presentation">
-                                                    <button class="nav-link d-block w-100" id="message-tab" data-bs-toggle="tab" data-bs-target="#message-tab-pane" type="button" role="tab" aria-controls="message-tab-pane" aria-selected="false"> المراسلات <span>+3</span></button>
+                                                    <button class="nav-link w-100" id="message-tab" data-bs-toggle="tab" data-bs-target="#message-tab-pane" type="button" role="tab" aria-controls="message-tab-pane" aria-selected="false"> المراسلات <span>+3</span></button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -570,9 +929,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -596,9 +955,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -622,9 +981,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -648,9 +1007,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -674,9 +1033,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -700,9 +1059,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -726,9 +1085,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -752,9 +1111,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul  class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -778,9 +1137,9 @@
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul>
-                                                                    <li>التاريخ:26/3/2019</li>
-                                                                    <li>الشرح: نص الشرح يوضح هنا</li>
+                                                                <button class="btn infoPopover" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-content='<ul class="listpopover">
+                                                                    <li>التاريخ : 26/3/2019</li>
+                                                                    <li>الشرح : نص الشرح يوضح هنا</li>
                                                                 </ul>'>
                                                                     <i class="fa-solid fa-info"></i>
                                                                 </button>
@@ -851,6 +1210,23 @@
                 </div>
             </div>
             <!-- ==============================================================-->
+            <div class="listButtonOption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="listButtonOptionPart">
+                                <a class="btn btn-primary withoutArrow" data-bs-toggle="modal" data-bs-target="#messageModal">
+                                    رد علي المراسلات
+                                </a>
+                                <a href="#" class="btn btn-primary withoutArrow">
+                                    عودة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============================================================-->
 
         </main>
         <!-- ============================================================== -->
@@ -894,8 +1270,10 @@
         $(function() {
             $('[data-bs-toggle="popover"]').popover({
                 html: true,
+                trigger: "hover"
 
             });
+
 
             $('[data-bs-toggle="tooltip"]').tooltip();
         });

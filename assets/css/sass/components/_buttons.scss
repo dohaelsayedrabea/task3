@@ -1,14 +1,15 @@
 .btn-primary {
     position: relative;
-    height: 48px;
     border-radius: 0;
+    min-height: 45px;
     background: rgb(31, 177, 185);
-    background: linear-gradient(270deg, rgba(31, 177, 185, 1) 0%, rgba(113, 165, 122, 1) 97%);
+    background: linear-gradient(270deg, rgb(31, 177, 185) 0%, rgb(113, 165, 122) 97%);
     border: 0px;
     border-color: transparent;
     box-shadow: 0px 10px 9px 0px #d4d4d4;
     font-size: 18px;
     line-height: 33px;
+    padding: 6px 0;
     &::after {
         font-family: FontAwesome;
         position: absolute;
@@ -23,6 +24,9 @@
 }
 
 .withoutArrow {
+    @media screen and (max-width: 1200px) {
+        font-size: 14px;
+    }
     &::after {
         content: unset;
     }
@@ -51,4 +55,9 @@
     color: #6f6f6f;
     font-size: 12px;
     line-height: 12px;
+    &:hover,
+    &:focus {
+        background: #c5c5c5;
+        color: #6f6f6f;
+    }
 }

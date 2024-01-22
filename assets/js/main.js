@@ -1,5 +1,6 @@
 (function($) {
     "use strict";
+
     /*
   < !-- ============================================================== -->
   < !--Password Toggle js -- >
@@ -41,3 +42,11 @@
         duration: 1000
     });
 })(jQuery);
+
+
+$(window).on('load', function() {
+    var $preloader = $('#page-preloader'),
+        $spinner = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(1000).fadeOut('slow');
+});

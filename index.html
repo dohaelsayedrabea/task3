@@ -4,7 +4,7 @@
 <head>
     <!-- meta tag -->
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Home</title>
     <meta name="description" content="">
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,19 +33,25 @@
 </head>
 
 <body dir="rtl">
-
+    <!-- ============================================================== -->
+    <!--  Loading- style you can find in style.css -->
+    <!-- ============================================================== -->
+    <div id="page-preloader"><span class="spinner"><img src="assets/images/icon/loading.gif"/> </span></div>
     <div class="page-Wrapper">
         <!-- ============================================================== -->
         <!-- Header - style you can find in style.css -->
         <!-- ============================================================== -->
         <header>
+            <div class="logoHeader">
+                <img src="assets/images/logo/logo.webp" alt="logo" />
+            </div>
             <div class="topHeader">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <ul>
                                 <li>
-                                    <span>محمود ربيع محمد أحمد</span>
+                                    <span>محمود ربيع محمد أحمد محمود محمود محمود محمود</span>
                                 </li>
                                 <li>
                                     <div class="dropdown">
@@ -70,7 +76,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#" class="roundedCircle">
+                                    <a href="login.html" class="roundedCircle">
                                         <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i>
                                     </a>
                                 </li>
@@ -83,23 +89,23 @@
             <div class="navHeader">
                 <div class="container">
                     <div class="row p-relative align-items-center">
-                        <div class="col-xxl-10 col-lg-10 col-md-9 col-4">
+                        <div class="col-xxl-10 col-lg-10 col-md-9 col-6">
                             <div class="grt-menu-row">
                                 <div class="grt-menu-right">
                                     <nav>
                                         <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
                                         <ul class="grt-menu">
-                                            <li class="active"><a href="">الرئيسية</a></li>
-                                            <li><a href="">ارسال معلومة مكانية</a></li>
-                                            <li><a href="">استقبال معلومة مكانية</a></li>
-                                            <li><a href="">التقارير</a></li>
+                                            <li class="active"><a href="index.html">الرئيسية</a></li>
+                                            <li><a href="sendInformation.html">ارسال معلومة مكانية</a></li>
+                                            <li><a href="#">استقبال معلومة مكانية</a></li>
+                                            <li><a href="#">التقارير</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                         <!---->
-                        <div class="col-xxl-2 col-lg-2 col-md-3 col-8">
+                        <div class="col-xxl-2 col-lg-2 col-md-3 col-6">
                             <div class="exchangebtn">
                                 <a data-bs-toggle="modal" data-bs-target="#formModal">
                                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -615,6 +621,7 @@
         $(function() {
             $('[data-bs-toggle="popover"]').popover({
                 html: true,
+                trigger: "hover"
 
             });
 

@@ -1,4 +1,45 @@
 header {
+    position: relative;
+    .logoHeader {
+        width: 384px;
+        height: 205px;
+        border-radius: 55px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -43px;
+        margin-top: -68px;
+        z-index: 11;
+        background: #fff;
+        transform: rotate(-343deg) scale(1) skew(1deg) translate(0px);
+        -webkit-transform: rotate(-343deg) scale(1) skew(1deg) translate(0px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 40px 70px 0px rgba(120, 120, 120, 0.11);
+        @media screen and (max-width: 991px) {
+            width: 315px;
+            height: 184px;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            height: 104px;
+            border-radius: 0;
+            position: relative;
+            margin-right: 0;
+            margin-top: 0;
+            transform: unset;
+            -webkit-transform: unset;
+        }
+        img {
+            transform: rotate(-17deg);
+            margin-top: 52px;
+            @media screen and (max-width: 600px) {
+                transform: unset;
+                margin-top: 0;
+            }
+        }
+    }
     .topHeader {
         padding: 12px 0;
         background: rgb(66, 110, 73);
@@ -11,6 +52,14 @@ header {
             span {
                 color: #fff;
                 font-size: 16px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 50%;
+                display: block;
+                text-align: left;
+                margin: 0 auto 0 0;
             }
             .roundedCircle {
                 width: 35px;
@@ -103,6 +152,9 @@ header {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            @media screen and (max-width: 1300px) {
+                justify-content: end;
+            }
         }
         .grt-mobile-button {
             display: none;
@@ -240,7 +292,10 @@ header {
                 width: 35px;
             }
             .grt-menu-row {
-                justify-content: start !important;
+                justify-content: end !important;
+                @media screen and (max-width: 600px) {
+                    justify-content: start !important;
+                }
             }
             .grt-mobile-button .line1,
             .grt-mobile-button .line2,
@@ -313,7 +368,7 @@ header {
                 justify-content: center;
                 gap: 12px;
                 border-radius: 10px;
-                color: #fff;
+                color: #fff !important;
                 padding: 0px 0px !important;
                 font-family: $font-family-Medium;
                 i {
